@@ -1,20 +1,11 @@
-import React from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import About from "./About";
-
-// pass this data down as props to the child component(s) that need it!
-import user from "../data/user";
-console.log(user);
-
-function App() {
+// App.js
+export const App = ({ name, bio, links }) => {
   return (
     <div>
-      <NavBar />
-      <Home />
-      <About />
+      <h1>{name}</h1>
+      <p>{bio}</p>
+      <a href={links.github}>GitHub</a>
+      <a href={links.linkedin}>LinkedIn</a>
     </div>
   );
-}
-
-export default App;
+};
